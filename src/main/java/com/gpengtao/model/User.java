@@ -9,6 +9,10 @@ public class User {
 
     private int age;
 
+    public User() {
+        System.out.println("============ User ==============");
+    }
+
     public String getName() {
         return name;
     }

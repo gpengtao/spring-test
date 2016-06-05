@@ -1,7 +1,9 @@
 package com.gpengtao;
 
+import com.gpengtao.model.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableAutoConfiguration
 public class Example {
+
+    @Bean
+    public User newOneUser(){
+        return new User();
+    }
 
     @RequestMapping("/")
     public String home() {
