@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- slf4j日志配置文件 -->
+<configuration>
+    <!-- 设置日志输出根目录 -->
+    <property name="log.dir" value="${catalina.base}/logs"/>
+    <property name="encoding" value="UTF-8"/>
+    <property name="normal-pattern" value="%d{yyyy-MM-dd.HH:mm:ss} %-5level [%thread] %logger{10}.%M:%L  %msg%n"/>
+    <property name="plain-pattern" value="%d{yyyy-MM-dd.HH:mm:ss} %msg%n"/>
+
+    <!-- log file default -->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.dir}/app.log</file>
+        <prudent>false</prudent>
+        <Append>true</Append>
+        <encoder>
+            <pattern>${normal-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/orderpool.log.%d{yyyy-MM-dd-HH}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!-- log file error -->
+    <appender name="error"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <file>${log.dir}/error.log</file>
+        <prudent>false</prudent>
+        <Append>true</Append>
+        <encoder>
+            <pattern>${normal-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/error.log.%d{yyyy-MM-dd-HH}
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${normal-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>
