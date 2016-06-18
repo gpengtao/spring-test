@@ -1,5 +1,9 @@
 package com.gpengtao.test.jvm;
 
+import sun.misc.Unsafe;
+
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,14 +14,18 @@ import java.util.List;
  */
 public class OOMHeapTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();
+        String name = runtime.getName();
+        System.out.println("当前进程的标识为："+name);
+
         List<OOMObject> list = new ArrayList<OOMObject>();
 
         while (true) {
             list.add(new OOMObject());
             System.out.println(list.size());
+            Thread.sleep(5000);
         }
-
     }
 
     static class OOMObject {
