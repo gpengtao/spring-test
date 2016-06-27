@@ -3,9 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="xiaoMing" class="com.gpengtao.model.User">
+    <bean id="user" class="com.gpengtao.model.User">
         <property name="name" value="xiaoMing"/>
         <property name="age" value="20"/>
     </bean>
 
+    <bean id="springUtil" class="com.gpengtao.test.context.SpringUtil"/>
 </beans>
