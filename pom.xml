@@ -67,7 +67,7 @@
                             <message>
                                 <![CDATA[你的java版本太低了]]>
                             </message>
-                            <version>1.9</version>
+                            <version>1.8</version>
                         </requireJavaVersion>
                     </rules>
                 </configuration>
