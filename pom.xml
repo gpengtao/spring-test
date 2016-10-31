@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -5,16 +6,18 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.5.RELEASE</version>
+        <version>1.4.1.RELEASE</version>
     </parent>
 
     <groupId>com.gpengtao</groupId>
     <artifactId>spring-test</artifactId>
     <version>1.0.0</version>
 
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>spring-test</name>
+    <modules>
+        <module>spring4x</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -86,4 +89,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
