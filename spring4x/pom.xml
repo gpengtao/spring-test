@@ -13,6 +13,8 @@
     <artifactId>spring4x</artifactId>
     <version>1.0.0</version>
 
+    <packaging>war</packaging>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

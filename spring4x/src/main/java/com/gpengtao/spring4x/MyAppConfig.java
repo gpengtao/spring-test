@@ -23,7 +23,7 @@ public class MyAppConfig {
     @Bean
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/classes/views");
+        viewResolver.setPrefix("/WEB-INF/classes/views/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
