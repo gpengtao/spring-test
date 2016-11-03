@@ -13,14 +13,14 @@ import javax.servlet.ServletRegistration;
 /**
  * Created by pengtao.geng on 2016/11/1.
  */
-public class MyWebInitializer implements WebApplicationInitializer {
+public class MySpringWebInitializer implements WebApplicationInitializer {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
 
-        logger.info("MyWebInitializer准备启动...");
+        logger.info("<<<<<<<<<<<<< My Spring Web Initializer准备启动 <<<<<<<<<<<<<");
 
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(MyAppConfig.class);

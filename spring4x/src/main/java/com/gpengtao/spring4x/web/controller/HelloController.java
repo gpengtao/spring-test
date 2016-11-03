@@ -15,7 +15,7 @@ public class HelloController {
 
     @RequestMapping("/index")
     public String hello() {
-        logger.info("view index");
+        logger.info("==================== view index =====================");
         return "index";
     }
 }
