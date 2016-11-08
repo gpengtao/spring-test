@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
+ * java类方式的配置spring
+ * <p>
  * Created by pengtao.geng on 2016/10/31.
  */
 @Configuration

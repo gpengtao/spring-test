@@ -11,6 +11,8 @@ import javax.servlet.annotation.HandlesTypes;
 import java.util.Set;
 
 /**
+ * 直接实现servlet3.0的接口，容器initialize时候调用此类，需要配置SPI (Service Provider Interface)
+ * <p>
  * Created by pengtao.geng on 2016/11/3.
  */
 @HandlesTypes(HelloSpring.class)

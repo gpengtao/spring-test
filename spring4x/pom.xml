@@ -14,6 +14,7 @@
     <version>1.0.0</version>
 
     <packaging>war</packaging>
+    <name>spring4x</name>
 
     <dependencies>
         <dependency>
@@ -33,4 +34,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+    </build>
 </project>

@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 /**
+ * WebApplicationInitializer是对servlet3.0 SPI启动spring的最底层接口
+ * <p>
  * Created by pengtao.geng on 2016/11/1.
  */
 public class MySpringWebInitializer implements WebApplicationInitializer {
