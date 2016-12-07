@@ -25,6 +25,6 @@ public class MySpringMvcWebInitializer extends AbstractAnnotationConfigDispatche
     @Override
     protected String[] getServletMappings() {
         // servlet的mapping配置
-        return new String[]{"/spring4x/*"};
+        return new String[]{"/spring44x/*"};
     }
 }

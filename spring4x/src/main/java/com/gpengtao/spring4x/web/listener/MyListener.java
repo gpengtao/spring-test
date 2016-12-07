@@ -8,6 +8,8 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 /**
+ * servlet3.0的listener
+ * <p>
  * Created by pengtao.geng on 2016/11/3.
  */
 @WebListener
