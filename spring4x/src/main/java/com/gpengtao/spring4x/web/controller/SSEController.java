@@ -17,7 +17,7 @@ public class SSEController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @RequestMapping(value = "/sse", produces = "text/event-stream")
+    @RequestMapping(value = "/push", produces = "text/event-stream")
     @ResponseBody
     public String sse() throws InterruptedException {
         logger.info("访问sse接口");

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by pengtao.geng on 2016/11/1.
@@ -26,4 +27,12 @@ public class HelloController {
         logger.info("==================== view hello =====================");
         return "hello";
     }
+
+    @RequestMapping("/sse")
+    @ResponseBody
+    public ModelAndView sse() {
+        logger.info("==================== view hello =====================");
+        return new ModelAndView("sse");
+    }
+
 }
