@@ -16,8 +16,8 @@ public class MyFilter implements Filter {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-        logger.info("<<<<<<<<<<<<< MyFilter init, config={}", filterConfig);
+    public void init(FilterConfig filterConfig) {
+        logger.info("<<<<<<<<<<<<< MyFilter 初始化, config={}", filterConfig);
     }
 
     @Override
