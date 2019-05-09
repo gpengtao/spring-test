@@ -30,5 +30,4 @@ public class GptSpringWeb_01_BaseInitializer implements WebApplicationInitialize
 		servlet.addMapping("/spring4x/*");
 		servlet.setLoadOnStartup(1);
 	}
-
 }
