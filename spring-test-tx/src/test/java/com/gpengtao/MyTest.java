@@ -3,7 +3,6 @@ package com.gpengtao;
 import com.gpengtao.tx.model.Person;
 import com.gpengtao.tx.service.PersonService;
 import org.assertj.core.util.Lists;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -22,18 +21,23 @@ public class MyTest {
 	@Resource
 	private PersonService personService;
 
-	@Before
+	@Test
 	public void delete_old_rows() {
 		personService.deleteAll();
 	}
 
 	@Test
-	public void test_tx_work() {
-		personService.save(mockPersonList());
+	public void test_tx_work_by_normal() {
+		personService.saveNormal(mockPersonList());
 	}
 
 	@Test
-	public void test_tx_not_work() {
+	public void test_tx_work_by_proxy() {
+		personService.saveByProxy(mockPersonList());
+	}
+
+	@Test
+	public void test_tx_not_work_by_multi_thread() {
 		personService.saveParallel(mockPersonList());
 	}
 

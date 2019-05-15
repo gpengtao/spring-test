@@ -2,6 +2,7 @@ package com.gpengtao.tx.service;
 
 import com.gpengtao.tx.dao.PersonDao;
 import com.gpengtao.tx.model.Person;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,8 +22,14 @@ public class PersonService {
 		personDao.deleteAll();
 	}
 
+	public void saveByProxy(List<Person> persons) {
+		PersonService service = (PersonService) AopContext.currentProxy();
+
+		service.saveNormal(persons);
+	}
+
 	@Transactional
-	public void save(List<Person> persons) {
+	public void saveNormal(List<Person> persons) {
 		for (Person person : persons) {
 			personDao.insertOne(person);
 		}
