@@ -18,6 +18,7 @@
     <modules>
         <module>spring4x</module>
         <module>spring-test-tx</module>
+        <module>test-spring-boot</module>
     </modules>
 
     <dependencyManagement>
