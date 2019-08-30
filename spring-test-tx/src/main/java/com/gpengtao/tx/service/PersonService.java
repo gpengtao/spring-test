@@ -18,6 +18,9 @@ public class PersonService {
 	@Resource
 	private PersonDao personDao;
 
+	@Resource
+	private PersonService2 personService2;
+
 	public void deleteAll() {
 		personDao.deleteAll();
 	}
@@ -38,5 +41,21 @@ public class PersonService {
 	@Transactional
 	public void saveParallel(List<Person> persons) {
 		persons.parallelStream().forEach(person -> personDao.insertOne(person));
+	}
+
+	@Transactional
+	public void saveByTxAndNoTx() {
+
+		Person person1 = Person.builder()
+				.name("john1")
+				.age(11)
+				.build();
+		personDao.insertOne(person1);
+
+		personService2.saveNoTx();
+
+		personDao.insertOne(person1);
+
+		throw new RuntimeException("异常");
 	}
 }

@@ -21,24 +21,44 @@ public class MyTest {
 	@Resource
 	private PersonService personService;
 
+	/**
+	 * 删除数据
+	 */
 	@Test
 	public void delete_old_rows() {
 		personService.deleteAll();
 	}
 
+	/**
+	 * 事务ok，普通
+	 */
 	@Test
 	public void test_tx_work_by_normal() {
 		personService.saveNormal(mockPersonList());
 	}
 
+	/**
+	 * 事务ok，硬编码，使用proxy
+	 */
 	@Test
 	public void test_tx_work_by_proxy() {
 		personService.saveByProxy(mockPersonList());
 	}
 
+	/**
+	 * 事务不ok，多线程并发
+	 */
 	@Test
 	public void test_tx_not_work_by_multi_thread() {
 		personService.saveParallel(mockPersonList());
+	}
+
+	/**
+	 * 事务方法 调用非事务方法，事务会传播
+	 */
+	@Test
+	public void test_tx_work_by_tx_and_no_tx() {
+		personService.saveByTxAndNoTx();
 	}
 
 	private static List<Person> mockPersonList() {
