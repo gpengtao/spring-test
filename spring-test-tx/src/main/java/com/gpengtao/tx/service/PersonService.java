@@ -56,6 +56,6 @@ public class PersonService {
 
 		personDao.insertOne(person1);
 
-		throw new RuntimeException("异常");
+//		throw new RuntimeException("异常");
 	}
 }
