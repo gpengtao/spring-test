@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <revision>1.0.0</revision>
     </properties>
 
@@ -28,6 +29,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.24</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -36,9 +42,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <!--                    <source>11</source>-->
+                    <!--                    <target>11</target>-->
+                    <!--                    <encoding></encoding>-->
+                    <!-- 跳过单测-->
+                    <skip>true</skip>
                 </configuration>
             </plugin>
 
@@ -61,7 +71,7 @@
                             <message>
                                 <![CDATA[你的java版本太低了]]>
                             </message>
-                            <version>1.8</version>
+                            <version>11</version>
                         </requireJavaVersion>
                     </rules>
                 </configuration>

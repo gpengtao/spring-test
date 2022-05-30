@@ -21,7 +21,5 @@ public class PersonService2 {
 				.age(22)
 				.build();
 		personDao.insertOne(person1);
-
-//		throw new RuntimeException("22222");
 	}
 }
