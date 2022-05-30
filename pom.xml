@@ -11,13 +11,18 @@
 
     <groupId>com.gpengtao</groupId>
     <artifactId>spring-test</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
 
     <packaging>pom</packaging>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <revision>1.0.0</revision>
+    </properties>
+
     <modules>
-        <module>spring4x</module>
-        <module>spring-test-tx</module>
+        <module>test-spring-4x</module>
+        <module>test-spring-tx</module>
         <module>test-spring-boot</module>
     </modules>
 

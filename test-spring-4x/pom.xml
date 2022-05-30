@@ -7,14 +7,13 @@
     <parent>
         <groupId>com.gpengtao</groupId>
         <artifactId>spring-test</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
     </parent>
 
-    <artifactId>spring4x</artifactId>
-    <version>1.0.0</version>
-
+    <artifactId>test-spring-4x</artifactId>
     <packaging>war</packaging>
-    <name>spring4x</name>
+
+    <name>test-spring-4x</name>
 
     <dependencies>
         <dependency>
@@ -53,7 +52,5 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 </project>

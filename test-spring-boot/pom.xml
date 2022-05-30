@@ -4,16 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
+        <groupId>com.gpengtao</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${revision}</version>
     </parent>
 
-    <groupId>com.gpengtao</groupId>
-    <artifactId>test-springboot</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <name>test-springboot</name>
+    <artifactId>test-spring-boot</artifactId>
 
+    <name>test-spring-boot</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
